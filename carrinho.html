@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/bootstrap4.css">
+      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="icon" type="image/png" href="img/icon.png">
+      <title>TomTech - Checkout | TomTech</title>
+      <style>
+         body{
+         background: linear-gradient(110deg, #8f9494 60%,#343a40  60%);
+         background-attachment: fixed                        
+         }
+         .shop{
+         font-size: 10px;
+         }
+         .space{
+         letter-spacing: 0.8px;
+         }
+         .card-2{
+         margin-top: 50px;
+         }
+         .card-header{
+         background-color: #fff;
+         border-bottom:0px solid #aaaa !important;
+         }
+         p{
+         font-size: 13px ;
+         }
+         .small{
+         font-size: 12px !important;
+         }
+         .boxed {
+         padding: 0px 8px 0 8px ;
+         background-color: #4bb8a9;
+         color: white;
+         }
+         .boxed-1{
+         padding: 0px 8px 0 8px ;
+         color: black !important;
+         border: 1px solid #aaaa;
+         }
+         input[type='number']{
+         width: 42px;
+         font-size: 13px;
+         } 
+      </style>
+   </head>
+   <header>
+      <div class="dashboard-header">
+         <nav class="navbar navbar-expand-md navbar-custom navbar-dark sticky-top">
+            <a href="#">
+            <img src="img/logo.png" 
+               width="120" 
+               height="40"/>
+            </a> 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <div id="navb" class="navbar-collapse collapse hide">
+                  <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Componentes</b>
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Processadores</a>
+                        <a class="dropdown-item" href="#">Motherboards</a>
+                        <a class="dropdown-item" href="#">Placas Gráficas</a>
+                        <a class="dropdown-item" href="#">Memórias Ram</a>
+                        <a class="dropdown-item" href="#">Fontes de Alimentação</a>
+                        <a class="dropdown-item" href="#">Caixas de Computador</a>
+                        <a class="dropdown-item" href="#">Coolers CPU</a>
+                        <a class="dropdown-item" href="#">Compostos Térmicos</a>
+                     </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Periféricos</b>
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">PC Audio</a>
+                        <a class="dropdown-item" href="#">Ratos</a>
+                        <a class="dropdown-item" href="#">Teclados</a>
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><b>Mobile</b></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><b>Redes</b></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><b>Adaptadores e Cabos</b></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><b>Consolas</b></a>
+                  </li>
+               </div>
+               <ul class="navbar-nav ml-auto navbar-right-top">
+                  <li class="nav-item">
+                     <div id="custom-search" class="top-search-bar">
+                        <input class="form-control" type="search" placeholder="Pesquisar">
+                     </div>
+                  </li>
+                  <li class="nav-item nav-user">
+                     <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/profile.png" alt="" class="user-avatar-md rounded-circle"></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <div class=" container-fluid my-5 ">
+         <div class="row justify-content-center ">
+            <div class="col-xl-10">
+               <div class="card shadow-lg ">
+                  <div class="row p-2 mt-3 justify-content-between mx-sm-2">
+                     <div class="col-auto">
+                     </div>
+                  </div>
+                  <div class="row justify-content-around">
+                     <div class="col-md-5">
+                        <div class="card border-0">
+                           <div class="card-header pb-0">
+                              <h2 class="card-title space" style = "color: #343a40"><b>CHECKOUT</b></h2>  
+                                 <div class="underline"></div>
+                              <p class="card-text text-muted mt-4  space"><b>Detalhes de Envio</b></p>
+                              <hr class="my-0">
+                           </div>
+                           <div class="card-body">
+                              <div class="row justify-content-between">
+                                 <div class="col-auto mt-0">
+                                    <p><b>Rua Sá Carneiro | 5300-XXX | Bragança, Portugal</b></p>
+                                 </div>
+                              </div>
+                              <div class="row mt-4">
+                                 <div class="col">
+                                    <p class="text-muted mb-2">Detalhes do Pagamento</p>
+                                    <hr class="mt-0">
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label for="NAME" class="small text-muted mb-1"><b>Número do cartão</b></label>
+                                 <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" maxlength="19">
+                              </div>
+                              <div class="form-group">
+                                 <label for="NAME" class="small text-muted mb-1"><b>Nome no cartão</b></label>
+                                 <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId">
+                              </div>
+                              <div class="row no-gutters">
+                                 <div class="col-sm-6 pr-sm-2">
+                                    <div class="form-group">
+                                       <label for="NAME" class="small text-muted mb-1"><b>Validade</b></label>
+                                       <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="NAME" class="small text-muted mb-1"><b>CVC</b></label>
+                                       <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="123" maxlength="3">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row mb-md">
+                                 <div class="col">
+                                    <button type="button" class="btn1 mt-3 mb-5">Efectuar Pagamento</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-5">
+                        <div class="card border-0 ">
+                           <div class="card-header card-2">
+                              <p class="card-text text-muted mt-4  space"><b>Carrinho</b><span class=" small text-muted ml-2 cursor-pointer"></p>
+                              <hr class="my-2">
+                           </div>
+                           <div class="row  justify-content-between">
+                              <div class="col-auto col-md-7">
+                                 <div class="media flex-column flex-sm-row">
+                                    <img class="img-fluid" src="img/iphone14.jpg" width="62" height="62">
+                                    <div class="media-body my-auto">
+                                       <div class="row ">
+                                          <div class="col">
+                                             <p class="mb-0"><b>IPhone 14 Pro</b></p>
+                                             <small class="text-muted">Produto ID: #123</small>
+                                             <small class="text-muted"></small>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-0 flex-sm-col col-auto  my-auto">
+                                 <input type="number" min="1" value="1">
+                              </div>
+                              <div class="pl-0 flex-sm-col col-auto my-auto">
+                                 <p><b>1299.99€</b></p>
+                              </div>
+                              <a href="#!" style="color: rgba(255, 0, 0, 0.582);"><ion-icon name="trash"></ion-icon></a>
+                           </div>
+                           <hr class="my-2">
+                           <div class="row  justify-content-between">
+                              <div class="col-auto col-md-7">
+                                 <div class="media flex-column flex-sm-row">
+                                    <img class=" img-fluid " src="img/rato_zowie.jpg" width="62" height="62">
+                                    <div class="media-body  my-auto">
+                                       <div class="row ">
+                                          <div class="col">
+                                             <p class="mb-0"><b>Rato BenQ ZOWIE ZA12-B</b></p>
+                                             <small class="text-muted">Produto ID: #123</small>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-0 flex-sm-col col-auto  my-auto">
+                                 <input type="number" min="1" value="1">
+                              </div>
+                              <div class="pl-0 flex-sm-col col-auto my-auto">
+                                 <p><b>75.00€</b></p>
+                              </div>
+                              <a href="#!" style="color: rgba(255, 0, 0, 0.582);"><ion-icon name="trash"></ion-icon></a>
+                           </div>
+                           <hr class="my-2">
+                           <div class="row  justify-content-between">
+                              <div class="col-auto col-md-7">
+                                 <div class="media flex-column flex-sm-row">
+                                    <img class=" img-fluid " src="img/monitor_samsung.jpg" width="62" height="62">
+                                    <div class="media-body  my-auto">
+                                       <div class="row ">
+                                          <div class="col">
+                                             <p class="mb-0"><b>Samsung LS34A650UXUXEN Monitor curvo 34" ultra WQHD</b></p>
+                                             <small class="text-muted">Produto ID: #123</small>
+                                             <small class="text-muted"></small>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-0 flex-sm-col col-auto  my-auto">
+                                 <input type="number" min="1" value="1">
+                              </div>
+                              <div class="pl-0 flex-sm-col col-auto my-auto">
+                                 <p><b>350.99€</b></p>
+                              </div>
+                              <a href="#!" style="color: rgba(255, 0, 0, 0.582);"><ion-icon name="trash"></ion-icon></a>
+                           </div>
+                           <hr class="my-2">
+                           <div class="row ">
+                              <div class="col">
+                                 <div class="row justify-content-between">
+                                    <div class="col-4">
+                                       <p class="mb-1"><b>Subtotal</b></p>
+                                    </div>
+                                    <div class="flex-sm-col col-auto">
+                                       <p class="mb-1"><b>00.00€</b></p>
+                                    </div>
+                                 </div>
+                                 <div class="row justify-content-between">
+                                    <div class="col-4">
+                                       <p class="mb-1"><b>Portes de Envio</b></p>
+                                    </div>
+                                    <div class="flex-sm-col col-auto">
+                                       <p class="mb-1"><b>00.00€</b></p>
+                                    </div>
+                                 </div>
+                                 <div class="row justify-content-between">
+                                    <div class="col-4">
+                                       <p ><b>Total</b></p>
+                                    </div>
+                                    <div class="flex-sm-col col-auto">
+                                       <p  class="mb-1"><b>00.00€</b></p>
+                                    </div>
+                                 </div>
+                                 <hr class="my-0">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+   </main>
+   <footer class="bg-dark text-center text-white ">
+      <div class="container p-4">
+      <section class="mb-4">
+         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <ion-icon name="logo-facebook"></ion-icon>
+         </a>
+         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <ion-icon name="logo-instagram"></ion-icon>
+         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <ion-icon name="logo-twitter"></ion-icon>
+         </a>
+         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <ion-icon name="logo-youtube"></ion-icon>
+         </a>
+      </section>
+      <section class="">
+         <form action="">
+            <div class="row d-flex justify-content-center">
+               <div class="col-auto">
+                  <p class="pt-2">
+                     <strong>SUBSCREVA À NEWSLETTER</strong>
+                  </p>
+               </div>
+               <div class="col-md-5 col-12">
+                  <div class="form-outline form-white mb-4">
+                     <input type="email" id="form5Example21" class="form-control" placeholder="Insira o seu email">
+                  </div>
+               </div>
+               <div class="col-auto">
+                  <button type="submit" class="btn btn-outline-light mb-4">
+                  Subscrever
+                  </button>
+               </div>
+            </div>
+         </form>
+      </section>
+      <section class="">
+         <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+               <h5 class="text-uppercase">A TomTech</h5>
+               <button class="btn1"><ion-icon name="mail"></ion-icon></i> CONTACTE-NOS</button>
+               <br>
+               <br>
+               </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+               <ul class="text-left mb-0" type="square">
+                  <li>
+                     <a href="#!" class="text-white">Contactos</a>
+                  </li>
+                  <li>
+                     <a href="#!" class="text-white">Perguntas Frequentes</a>
+                  </li>
+                  <li>
+                     <a href="#!" class="text-white">Política de Privacidade</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+               <ul class="text-left mb-0">
+                     <img src="img/mp_visa.png"/>
+               </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+               <ul class="text-left mb-0">
+                     <img src="img/mp_paypal.png"/>
+               </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+               <ul class="text-left mb-0">
+                     <img src="img/mp_mastercard.png"/>
+               </ul>
+            </div>
+      </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+         <a class="text-white" href="">@2022 TomTech todos os direitos reservados.</a>
+      </div>
+   </footer>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   </body>
+</html>

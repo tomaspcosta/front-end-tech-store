@@ -1,0 +1,457 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/bootstrap4.css">
+      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="icon" type="image/png" href="img/icon.png">
+      <title>Tom Tech - Item List | TomTech</title>
+      <style>
+body {
+   background: linear-gradient(110deg, #8f9494 60%,#343a40  60%);
+   background-attachment: fixed  
+}
+
+.product_price {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: -11px;
+    margin-bottom: 0px;
+    color: #080808;
+    clear: left
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125)
+}
+
+.seperator {
+    background: #343a40
+}
+
+.wrapper {
+        width: 100%;
+    margin-top: 48px;
+    margin-left: 16px;
+}
+
+.panel-collapse{
+    background: #fff;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.panel-heading {
+    padding: 0;
+    border: 0;
+    padding: 9px 3px !important;
+}
+
+.panel-body{
+    padding: 13px;
+}
+
+.panel-title>a,
+.panel-title>a:active {
+    display: block;
+    padding: 10px;
+    color: #555;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+
+}
+
+.panel-default>.panel-heading {
+    color: #282b2f;
+    background-color: #ffffff !important;
+        border-bottom: 1px solid #d5d5d5;
+}
+
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: -8.66667px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000
+}
+
+.option-input:hover {
+    background: #9faab7
+}
+
+.option-input:checked {
+    background: #18191a
+}
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    float: left;
+    margin-left: -4px !important;
+    margin-top: 9px
+}
+
+.ml-10 {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #080808
+}
+
+.btn.btn-out {
+    outline: 1px solid #fff;
+    outline-offset: -5px
+}
+
+.btn {
+    border-radius: 2px;
+    text-transform: capitalize;
+    font-size: 11px;
+    padding: 10px 19px;
+    cursor: pointer;
+    color: #fff
+}
+
+.filters-text {
+    background: #343a40;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 15px;
+    padding: 12px 
+}
+
+.filter-span {
+    font-size: 17px;
+    color: white;
+}
+      </style>
+   </head>
+   <header>
+      <div class="dashboard-header">
+         <nav class="navbar navbar-expand-md navbar-custom navbar-dark sticky-top">
+            <a href="#">
+            <img src="img/logo.png" 
+               width="120" 
+               height="40"/>
+            </a> 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <div id="navb" class="navbar-collapse collapse hide">
+                  <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Componentes</b>
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Processadores</a>
+                        <a class="dropdown-item" href="#">Motherboards</a>
+                        <a class="dropdown-item" href="#">Placas Gráficas</a>
+                        <a class="dropdown-item" href="#">Memórias Ram</a>
+                        <a class="dropdown-item" href="#">Fontes de Alimentação</a>
+                        <a class="dropdown-item" href="#">Caixas de Computador</a>
+                        <a class="dropdown-item" href="#">Coolers CPU</a>
+                        <a class="dropdown-item" href="#">Compostos Térmicos</a>
+                     </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Periféricos</b>
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">PC Audio</a>
+                        <a class="dropdown-item" href="#">Ratos</a>
+                        <a class="dropdown-item" href="#">Teclados</a>
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><b>Mobile</b></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><b>Redes</b></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><b>Adaptadores e Cabos</b></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><b>Consolas</b></a>
+                  </li>
+               </div>
+               <ul class="navbar-nav ml-auto navbar-right-top">
+                  <li class="nav-item">
+                     <div id="custom-search" class="top-search-bar">
+                        <input class="form-control" type="search" placeholder="Pesquisar">
+                     </div>
+                  </li>
+                  <li class="nav-item nav-user">
+                     <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/profile.png" alt="" class="user-avatar-md rounded-circle"></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <div class="row">
+
+         <div class="col-md-4">
+
+         <div class="wrapper center-block hidden-xs">
+             <div class="filters-text">
+                 <span class="filter-span"><b>Categorias</b></span>
+                 <span style="float:right;"><i class="fa fa-filter"></i></span>
+             </div>
+             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="heading1">
+                         <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1"> Componentes </a> </h4>
+                     </div>
+                     <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                         <div class="panel-body">
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Processadores</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">MotherBoards</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Placas Gráficas</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Memórias RAM</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Fontes de Alimentação</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Caixas de Computador</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Coolers CPU</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Compostos Térmicos</span> </label> </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="heading2">
+                         <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2"> Periféricos </a> </h4>
+                     </div>
+                     <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                         <div class="panel-body">
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">PC Audio</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Ratos</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Teclados</span> </label> </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="heading3">
+                         <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3"> Mobile </a> </h4>
+                     </div>
+                     <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                         <div class="panel-body">
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Android</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">IPhone</span> </label> </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="heading4">
+                         <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4"> Redes </a> </h4>
+                     </div>
+                     <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                         <div class="panel-body">
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Routers</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Expansão de Rede</span> </label> </div>
+                             <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Switches de Rede</span> </label> </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading5">
+                      <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5"> Adaptadores e Cabos </a> </h4>
+                  </div>
+                  <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                      <div class="panel-body">
+                          <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Conectividade HDMI</span> </label> </div>
+                          <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Conectividade DisplayPort</span> </label> </div>
+                          <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Conectividade USB-C</span> </label> </div>
+                          <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Conectividade de Rede</span> </label> </div>
+                          <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Conectividade de Áudio</span> </label> </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel panel-default">
+               <div class="panel-heading" role="tab" id="heading6">
+                   <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6"> Consolas </a> </h4>
+               </div>
+               <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                   <div class="panel-body">
+                       <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Playstation</span> </label> </div>
+                       <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Xbox</span> </label> </div>
+                       <div class="checkbox"> <label> <input type="checkbox" class="option-input checkbox" name="filter[]" value="12" /> <span class="ml-10">Nintendo</span> </label> </div>
+                   </div>
+               </div>
+           </div>
+             </div>
+             <br>
+             <div class="text-right"> <button class="btn1" id="button-filter">Procurar</button> </div>
+         </div>
+     
+     
+     
+           
+         </div>
+     
+         <div class="col-md-8">
+     
+           <div class="container py-5">
+         <div class="row">
+             <div class="col-lg-12 mx-auto"> 
+                 <ul class="list-group shadow">
+                     <li class="list-group-item">
+                         <div class="media align-items-lg-center flex-column flex-lg-row"><img src="img/3060ti.jpg" alt="Generic placeholder image" width="250" height="200" class="order-1 order-lg-1">
+                             <div class="media-body order-2 order-lg-2 ml-lg-5">
+                                 <h5 class="mt-0 mb-1">Gráfica Gigabyte GeForce® RTX 3060 Ti Gaming OC Pro 8GB</h5>
+                                 <span class="product_price price-new">690.00€</span>
+                                 <hr class="mb-2 mt-1 seperator"> 
+                             </div>
+                         </div>
+                     </li>
+                     <li class="list-group-item">
+                         <div class="media align-items-lg-center flex-column flex-lg-row"> <img src="img/gpu_4090.jpg" alt="Generic placeholder image" height="200" width="250" class="order-1 order-lg-1">
+                             <div class="media-body order-2 order-lg-2 ml-lg-5">
+                                 <h5 class="mt-0 mb-1">Placa Gráfica MSI GeForce RTX 4090 Gaming X Trio 24G</h5>
+                                 <span class="product_price price-new">2199.99€</span>
+                                 <hr class="mb-2 mt-1 seperator">
+                             </div>
+                         </div>
+                     </li>
+                     <li class="list-group-item">
+                         <div class="media align-items-lg-center flex-column flex-lg-row"> <img src="img/gpu_amd6900xt.jpg" alt="Generic placeholder image" height="200" width="250" class="order-1 order-lg-1">
+                             <div class="media-body order-2 order-lg-2 ml-lg-5">
+                                 <h5 class="mt-0 mb-1">Placa Gráfica Asus TUF Gaming Radeon RX 6900 XT 16GB GDDR6 OC</h5>
+                                 <span class="product_price price-new">1699.99€</span>
+                                 <hr class="mb-2 mt-1 seperator">
+                             </div>
+                         </div>
+                     </li>
+                     <li class="list-group-item">
+                         <div class="media align-items-lg-center flex-column flex-lg-row"> <img src="img/gpu_amdrx6700xt.jpg" alt="Generic placeholder image" width="250" height="200" class="order-1 order-lg-1">
+                             <div class="media-body order-2 order-lg-2 ml-lg-5">
+                                 <h5 class="mt-0 mb-1">Placa Gráfica Asus ROG Strix Radeon RX 6700 XT 12GB GDDR6 OC</h5>
+                                 <span class="product_price price-new">899.99€</span>
+                                 <hr class="mb-2 mt-1 seperator">
+                             </div>
+                         </div>
+                     </li>
+                     <li class="list-group-item">
+                         <div class="media align-items-lg-center flex-column flex-lg-row"> <img src="img/gpu_nvidia4080.jpg" alt="Generic placeholder image" width="250" height="200" class="order-1 order-lg-1">
+                             <div class="media-body order-2 order-lg-2 ml-lg-5">
+                                 <h5 class="mt-0 mb-1">Placa Gráfica Gigabyte GeForce RTX 4080 Eagle 16GB GDDR6X</h5>
+                                 <span class="product_price price-new">1399.99€</span>
+                                 <hr class="mb-2 mt-1 seperator">
+                             </div>
+                         </div>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+           
+         </div>
+          
+        </div>
+   </main>
+   <footer class="bg-dark text-center text-white ">
+    <div class="container p-4">
+    <section class="mb-4">
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <ion-icon name="logo-facebook"></ion-icon>
+       </a>
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <ion-icon name="logo-instagram"></ion-icon>
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <ion-icon name="logo-twitter"></ion-icon>
+       </a>
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <ion-icon name="logo-youtube"></ion-icon>
+       </a>
+    </section>
+    <section class="">
+       <form action="">
+          <div class="row d-flex justify-content-center">
+             <div class="col-auto">
+                <p class="pt-2">
+                   <strong>SUBSCREVA À NEWSLETTER</strong>
+                </p>
+             </div>
+             <div class="col-md-5 col-12">
+                <div class="form-outline form-white mb-4">
+                   <input type="email" id="form5Example21" class="form-control" placeholder="Insira o seu email">
+                </div>
+             </div>
+             <div class="col-auto">
+                <button type="submit" class="btn btn-outline-light mb-4">
+                Subscrever
+                </button>
+             </div>
+          </div>
+       </form>
+    </section>
+    <section class="">
+       <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+             <h5 class="text-uppercase">A TomTech</h5>
+             <button class="btn1"><ion-icon name="mail"></ion-icon></i> CONTACTE-NOS</button>
+             <br>
+             <br>
+             </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+             <ul class="text-left mb-0" type="square">
+                <li>
+                   <a href="#!" class="text-white">Contactos</a>
+                </li>
+                <li>
+                   <a href="#!" class="text-white">Perguntas Frequentes</a>
+                </li>
+                <li>
+                   <a href="#!" class="text-white">Política de Privacidade</a>
+                </li>
+             </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+             <ul class="text-left mb-0">
+                   <img src="img/mp_visa.png"/>
+             </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+             <ul class="text-left mb-0">
+                   <img src="img/mp_paypal.png"/>
+             </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+             <ul class="text-left mb-0">
+                   <img src="img/mp_mastercard.png"/>
+             </ul>
+          </div>
+    </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+       <a class="text-white" href="">@2022 TomTech todos os direitos reservados.</a>
+    </div>
+ </footer>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   </body>
+</html>
